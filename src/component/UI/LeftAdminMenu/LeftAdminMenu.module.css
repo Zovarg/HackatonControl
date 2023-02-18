@@ -1,0 +1,281 @@
+/*Модалка под иконкой аватара*/
+.modalOptions{
+    position: fixed;
+    z-index: 2;
+    background: #FFFFFF;
+    /* Layer Shadow */
+
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px 8px 8px;
+    width: 240px;
+    left: 70px;
+}
+.modalOptions__header{
+    padding: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.modalOptions__header_img{
+
+}
+.modalOptions__header_img img{
+
+}
+.modalOptions__header_descr{
+
+}
+.modalOptionsHeaderName{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+.modalOptionsHeaderEmail{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+
+    /* Black/40% */
+
+    color: rgba(0, 0, 0, 0.4);
+}
+.modalOptions__list{
+
+}
+.modalOptions__list_el{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 4px 8px 8px;
+}
+.modalOptionsListDescr{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.modalOptionsListDescr__icon{
+
+}
+.modalOptionsListDescr__icon img{
+
+}
+.modalOptionsListDescr__text{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+.modalOptionsListArrow{
+
+}
+.modalOptionsListArrow svg{
+
+}
+.modalOptions__logout{
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.modalOptions__logout_icon{
+
+}
+.modalOptions__logout_icon img{
+
+}
+.modalOptions__logout_text{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Secondary/Red */
+
+    color: #FF4747;
+}
+
+
+
+
+.leftMenu{
+    position: fixed;
+    width: 212px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.leftMenu__logo{
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 76px;
+}
+.leftMenu__logo img{
+    width: 108.41px;
+    height: 20px;
+}
+.leftMenu__main{
+
+}
+.leftMenu__main_role{
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.leftMenuRole_data{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.leftMenuRole_data__avatar{
+
+}
+.leftMenuRole_data__name{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Primary/Brand Color B */
+
+    background: linear-gradient(296.06deg, #303CB2 8.84%, #0088D5 49.48%, #64C3D7 90.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.leftMenuRole_icon{
+
+}
+
+
+
+.leftMenu__blocks{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.leftMenu__block_el{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    user-select: none;
+}
+.titleBlockMenu{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    padding-left: 12px;
+}
+.titleBlockLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.blockMainLinkWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.blockMainLink{
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.blockMainLink:hover{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+.blockMainHideIcon{
+
+}
+.blockMainHideIcon svg{
+
+}
+.blockMainShowIcon{
+
+}
+.blockMainShowIcon svg{
+
+}
+.blockMainInfo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.blockMainInfo__img{
+
+}
+.blockMainInfo__img img{
+
+}
+.blockMainInfo__descr{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.blockAdditionLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.blockAdditionLink{
+    padding: 4px 31px 4px 52px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+    cursor: pointer;
+}
+.blockAdditionLink:hover{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}

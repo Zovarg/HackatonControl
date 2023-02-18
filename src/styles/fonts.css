@@ -1,0 +1,88 @@
+/* Neue Machina-200*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/NeueMachina-Ultralight.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Ultralight.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/NeueMachina-Ultralight.woff') format('woff'), /* Modern Browsers */
+         url('fonts/NeueMachina-Ultralight.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-300*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/NeueMachina-Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Light.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Light.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-regular*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/NeueMachina-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Regular.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-500*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/NeueMachina-Medium.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Medium.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-600 */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/NeueMachina-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/NeueMachina-Bold.woff') format('woff'), /* Modern Browsers */
+    url('fonts/NeueMachina-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-700 */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/NeueMachina-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Bold.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-800*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/NeueMachina-Ultrabold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Ultrabold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Ultrabold.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Ultrabold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+/* Neue Machina-900*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/NeueMachina-Black.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NeueMachina-Black.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/NeueMachina-Black.woff') format('woff'), /* Modern Browsers */
+        url('fonts/NeueMachina-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+}

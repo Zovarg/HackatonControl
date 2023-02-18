@@ -1,0 +1,85 @@
+/*Верхний фикс элемент*/
+.searchHeader{
+    height: 72px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-between;
+    right: 280px;
+    left: 212px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.searchHeader__first{
+    display: flex;
+    gap: 8px;
+}
+.searchHeader__first_icons{
+    display: flex;
+    gap: 8px;
+}
+.searchHeader__first_path{
+    display: flex;
+    gap: 4px;
+}
+.secondaryPartPath{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+}
+.pathSeparator{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.2);
+    padding: 4px 0;
+}
+.mainPartPath{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+    padding: 4px 8px;
+}
+.searchHeader__second{
+    display: flex;
+    gap: 20px;
+}
+.searchHeader__second_input{
+    position: relative;
+}
+.searchHeaderInputIcon{
+    position: absolute;
+    top: 6px;
+    left:6px;
+}
+.searchHeader__second_input input{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    outline: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 26px;
+    padding-right: 10px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.searchHeader__second_icons{
+    display: flex;
+    gap: 8px;
+}
+.searchHeader__second_icons div{
+    cursor: pointer;
+}

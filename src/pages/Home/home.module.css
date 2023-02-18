@@ -1,0 +1,251 @@
+.container{
+
+}
+/* Шапка */
+.container__header{
+    padding: 16px 28px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.container__header_logo{
+    position: absolute;
+    left: 28px;
+    top: 17px;
+}
+.container__header_logo img{
+
+}
+.container__header_navigation{
+    display: flex;
+    gap: 16px;
+}
+.navigationEl{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+.container__header_access{
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    right: 28px;
+    top:16px;
+}
+.accessEl{
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.accessEl_active{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Форма */
+
+.container__body{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 106px 145px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.container__body_title{
+    display: flex;
+    justify-content: center;
+}
+.bodyTitleWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.bodyTitleInfo{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+
+    background: linear-gradient(290.83deg, #855CBF 5.01%, #D444B4 53.82%, #FF493A 100.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.bodyTitleDescription{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.container__body_social{
+    display: flex;
+    gap: 20px;
+    padding: 4px 8px;
+}
+.mediaEl{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.mediaEl_icon{
+
+}
+.mediaEl_icon svg{
+
+}
+.mediaEl_naming{
+    padding: 0 16px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+
+.container__body_line{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+.bodyLineEl{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 129px;
+}
+.bodyLineText{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.formAndBtns{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.container__body_form{
+
+}
+.formInput{
+
+}
+.formInputFirst input, .formInputSecond input {
+    width: 100%;
+    background: #FFFFFF;
+    /* Black/10% */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+.formInputFirst{
+    margin-bottom: 16px;
+}
+.formInputSecond{
+    margin-bottom: 8px;
+}
+.formForgetPassword{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: right;
+
+
+    color: #2684FF;
+}
+
+.container__body_btns{
+
+}
+.btnSubmit{
+    background: linear-gradient(290.83deg, #855CBF 5.01%, #D444B4 53.82%, #FF493A 100.06%);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.btnRedirect{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+.btnRedirect__info{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+.btnRedirect__ref{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2684FF;
+}
+
+
+
+.bottomHome{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 49px;
+}
