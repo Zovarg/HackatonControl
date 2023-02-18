@@ -54,7 +54,7 @@ const AllRequests = ({page, setPage}) => {
                     <div className={cl.addNewRequest}>
                         <div className={cl.addNewRequest__icon}>
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.625 4.875C10.625 4.52982 10.3452 4.25 10 4.25C9.65482 4.25 9.375 4.52982 9.375 4.875V9.875H4.375C4.02982 9.875 3.75 10.1548 3.75 10.5C3.75 10.8452 4.02982 11.125 4.375 11.125H9.375V16.125C9.375 16.4702 9.65482 16.75 10 16.75C10.3452 16.75 10.625 16.4702 10.625 16.125V11.125H15.625C15.9702 11.125 16.25 10.8452 16.25 10.5C16.25 10.1548 15.9702 9.875 15.625 9.875H10.625V4.875Z" fill="black" fill-opacity="0.4"/>
+                                <path d="M10.625 4.875C10.625 4.52982 10.3452 4.25 10 4.25C9.65482 4.25 9.375 4.52982 9.375 4.875V9.875H4.375C4.02982 9.875 3.75 10.1548 3.75 10.5C3.75 10.8452 4.02982 11.125 4.375 11.125H9.375V16.125C9.375 16.4702 9.65482 16.75 10 16.75C10.3452 16.75 10.625 16.4702 10.625 16.125V11.125H15.625C15.9702 11.125 16.25 10.8452 16.25 10.5C16.25 10.1548 15.9702 9.875 15.625 9.875H10.625V4.875Z" fill="black" fillOpacity="0.4"/>
                             </svg>
                         </div>
                         <div className={cl.addNewRequest__text}>Новая заявка</div>
@@ -136,7 +136,7 @@ const AllRequests = ({page, setPage}) => {
             </div>
             <div className={cl.RequestsLits}>
                 {tickets.map(el=>
-                    <div className={cl.RequestEl}>
+                    <div key={el.id} className={cl.RequestEl}>
                         <div className={cl.RequestEl__header}>
                             <div className={cl.RequestEl__header_left}>
                                 <div className={cl.RequestElHeaderTitle}>{el.title}</div>
@@ -152,7 +152,7 @@ const AllRequests = ({page, setPage}) => {
                             <div className={cl.RequestEl__status_funnel}>Ожидание</div>
                         </div>
                         <div className={cl.RequestEl__range}>
-                            <input type="range" value={counterPercent(el.tasks)}/>
+                            <input readOnly type="range" value={counterPercent(el.tasks)}/>
                         </div>
                         <div className={cl.RequestEl__counter}>
                             <div>{counterSuccessTickets(el.tasks)} / {el.tasks.length?el.tasks.length:'?'} Всего подзадач</div>
