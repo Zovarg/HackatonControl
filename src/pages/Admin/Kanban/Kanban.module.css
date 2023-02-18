@@ -1,0 +1,201 @@
+.container{
+    background-color: white;
+    margin: 72px 280px 0 212px;
+    padding: 28px;
+}
+.tasks_wrapper{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 29px;
+    cursor: grab;
+}
+.taskFunnel{
+    min-width: 30%;
+}
+.taskFunnel__title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+.taskFunnel__title_name{
+    padding-left: 8px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.taskFunnel__title_name span{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.taskFunnel__line{
+    height: 4px;
+    margin-bottom: 16px;
+    background: #B1E3FF;
+    border-radius: 16px;
+}
+.taskFunnel__list{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.taskFunnel__list_el{
+    padding:20px 24px 10px;
+    background: #F7F9FB;
+    border-radius: 16px;
+}
+.taskFunnelEl__name{
+    display: inline-block;
+    padding: 0 6px;
+    background: #E2F5FF;
+    border-radius: 4px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #59A8D4;
+}
+.taskFunnelEl__date{
+    margin-top: 8px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.taskFunnelEl__description{
+    margin-top: 8px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.taskFunnelEl__address{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.taskFunnelEl__executor{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.taskFunnelEl__executor_left{
+     display: flex;
+    gap:8px;
+    padding: 0 8px 0 4px;
+}
+.executorPhoto{
+
+}
+.executorName{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.taskFunnelEl__executor_right{
+    display: flex;
+    gap: 16px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.counterFiles{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.counterDialogs{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerParts{
+    display: flex;
+    gap:16px;
+    align-items: center;
+    padding: 8.5px;
+}
+.headerPart{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.headerPartActive{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    background: linear-gradient(290.83deg, #855CBF 5.01%, #D444B4 53.82%, #FF493A 100.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.headerOptions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.addNewRequest{
+    display: flex;
+    align-items: center;
+    padding: 4px 8px 4px 4px;
+    cursor: pointer;
+}
+.addNewRequest__icon{
+
+}
+.addNewRequest__text{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.newClient{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.headerDots{
+
+}

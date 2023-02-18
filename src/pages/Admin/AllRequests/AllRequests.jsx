@@ -23,6 +23,23 @@ const AllRequests = ({page, setPage}) => {
     useEffect(() => {
         fetchTickets();
     }, []);
+    function counterPercent(mas){
+        if(mas.length){
+            let value=0
+            mas.map(el=>{
+                if(el.status==="DONE") value+=1
+            })
+
+            return Math.round(value/mas.length*100)
+        } else return 0
+    }
+    function counterSuccessTickets(mas){
+        let value=0
+        mas.map(el=>{
+            if(el.status==="DONE") value+=1
+        })
+        return value
+    }
     return (
         <div className={cl.container}>
             <div className={cl.headerWrapper}>
@@ -135,11 +152,11 @@ const AllRequests = ({page, setPage}) => {
                             <div className={cl.RequestEl__status_funnel}>Ожидание</div>
                         </div>
                         <div className={cl.RequestEl__range}>
-                            <input type="range" value={0}/>
+                            <input type="range" value={counterPercent(el.tasks)}/>
                         </div>
                         <div className={cl.RequestEl__counter}>
-                            <div>0 / {el.tasks.length?el.tasks.length:'?'} Всего подзадач</div>
-                            <div>0,00%</div>
+                            <div>{counterSuccessTickets(el.tasks)} / {el.tasks.length?el.tasks.length:'?'} Всего подзадач</div>
+                            <div>{counterPercent(el.tasks)}%</div>
                         </div>
                     </div>
                 )}
