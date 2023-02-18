@@ -18,8 +18,7 @@ import IdentificationCard from "../../../images/IdentificationCard.svg";
 import LogoAdmin from "../../../images/LogoAdmin.svg";
 import useAuth from "../../../hooks/useAuth";
 import {useNavigate} from "react-router-dom";
-
-const LeftAdminMenu = () => {
+const LeftAdminMenu = ({page, setPage}) => {
     const auth = useAuth();
     const nav = useNavigate();
     const [menu, setMenu]=useState([
@@ -28,12 +27,7 @@ const LeftAdminMenu = () => {
             mainLinkName:'Сводка',
             mainLinkIcon:ChartPieSlice,
             mainLinkVisible:false,
-            additionalLinks:[
-                {additionalLinkId:1, additionalLinkName:'Профиль'},
-                {additionalLinkId:2, additionalLinkName:'Доступ'},
-                {additionalLinkId:3, additionalLinkName:'Безопасность'},
-                {additionalLinkId:4, additionalLinkName:'Документы'},
-            ]
+            additionalLinks:[{additionalLinkId:1, additionalLinkName:'Аналитика'},]
         },
         {
             mainLinkId:2,
@@ -41,10 +35,12 @@ const LeftAdminMenu = () => {
             mainLinkIcon:Kanban,
             mainLinkVisible:false,
             additionalLinks:[
-                {additionalLinkId:5, additionalLinkName:'Профиль'},
-                {additionalLinkId:6, additionalLinkName:'Доступ'},
-                {additionalLinkId:7, additionalLinkName:'Безопасность'},
-                {additionalLinkId:8, additionalLinkName:'Документы'},
+                {additionalLinkId:5, additionalLinkName:'Все заявки'},
+                {additionalLinkId:6, additionalLinkName:'Канбан'},
+                {additionalLinkId:7, additionalLinkName:'БЦ'},
+                {additionalLinkId:8, additionalLinkName:'ЖК'},
+                {additionalLinkId:8, additionalLinkName:'ТЦ'},
+                {additionalLinkId:8, additionalLinkName:'Отели'},
             ]
         },
         {
@@ -116,7 +112,7 @@ const LeftAdminMenu = () => {
         }));
     }
     function changeSections(prop, value, event) {
-        setSections(menu.map(obj => {
+        setSections(sections.map(obj => {
             if (obj.mainLinkId === prop.mainLinkId) {
                 return {...obj, [event]: value};
             } else {
@@ -250,7 +246,7 @@ const LeftAdminMenu = () => {
                                                 el.mainLinkVisible?
                                                     <div className={cl.blockAdditionLinks}>
                                                         {el.additionalLinks.map(ob=>
-                                                            <div className={cl.blockAdditionLink}>{ob.additionalLinkName}</div>
+                                                            <div key={ob.additionalLinkName}  className={page===ob.additionalLinkName?cl.blockAdditionLink__active:cl.blockAdditionLink} onClick={()=>{setPage(ob.additionalLinkName)}}>{ob.additionalLinkName}</div>
                                                         )}
                                                     </div>
                                                     :
