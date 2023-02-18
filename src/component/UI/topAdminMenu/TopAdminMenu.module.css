@@ -19,6 +19,9 @@
     display: flex;
     gap: 8px;
 }
+.searchHeader__first_icons div{
+    cursor: pointer;
+}
 .searchHeader__first_path{
     display: flex;
     gap: 4px;

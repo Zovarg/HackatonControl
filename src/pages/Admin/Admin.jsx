@@ -97,11 +97,21 @@ export const Admin = () => {
         { name: 'Group D', value: 8.1 },
     ];
     const colorsPie = ['#855CBF', '#C6C7F8', '#BAEDBD', '#2684FF'];
-
+    const [visibleLeftMenu, setVisibleLeftMenu]=useState(true)
+    const [visibleRightMenu, setVisibleRightMenu]=useState(true)
     return (
         <div>
-            <LeftAdminMenu/>
-            <TopAdminMenu/>
+            {visibleLeftMenu?
+                <LeftAdminMenu/>
+            :
+                <></>
+            }
+            <TopAdminMenu
+                visibleLeft={visibleLeftMenu}
+                setVisibleLeftMenu={setVisibleLeftMenu}
+                visibleRightMenu={visibleRightMenu}
+                setVisibleRightMenu={setVisibleRightMenu}
+            />
             <div className={cl.container}>
                 <div className={cl.title_stats}>
                     <div className={cl.title_stats__body}>Бизнес-центры</div>
@@ -337,7 +347,12 @@ export const Admin = () => {
                     </div>
                 </div>
             </div>
-            <RightAdminMenu/>
+            {
+                visibleRightMenu?
+                    <RightAdminMenu/>
+                    :
+                    <></>
+            }
         </div>
     );
 }
