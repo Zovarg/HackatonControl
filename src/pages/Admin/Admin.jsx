@@ -6,6 +6,7 @@ import RightAdminMenu from "../../component/UI/RightAdminMennu/RightAdminMenu";
 import TopAdminMenu from "../../component/UI/topAdminMenu/TopAdminMenu";
 import Analytics from "./Analytics/Analytics";
 import Kanban from "./Kanban/Kanban";
+import AllRequests from "./AllRequests/AllRequests";
 export const Admin = () => {
 
     const [visibleLeftMenu, setVisibleLeftMenu]=useState(true)
@@ -29,7 +30,15 @@ export const Admin = () => {
             />
             {
                 (page==='Аналитика' && <Analytics/>)||
-                (page==='Канбан' && <Kanban/>)
+                (page==='Канбан' && <Kanban
+                    page={page}
+                    setPage={setPage}
+                />) ||
+                (page==='Все заявки' && <AllRequests
+                    page={page}
+                    setPage={setPage}
+                />)
+
 
 
             }

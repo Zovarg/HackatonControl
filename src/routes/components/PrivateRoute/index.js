@@ -5,7 +5,7 @@ function PrivateRoute({ children }) {
   const auth = useAuth();
   const url = new URLSearchParams();
 
-  return (auth.user && auth.user.role=='GUEST') ? (
+  return (auth.user && auth.user.role=='Гость') ? (
     children
   ) : (
     <Navigate

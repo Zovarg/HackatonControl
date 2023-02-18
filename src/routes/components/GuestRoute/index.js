@@ -6,9 +6,9 @@ function GuestRoute({ children, ...rest }) {
   const location = useLocation();
   const url = new URLSearchParams(location.search.slice(1));
 
-  if(auth.user && auth.user.role=='ADMIN'){
+  if(auth.user && auth.user.role=='Администратор'){
     return <Navigate to={url.get("redirect") || "/admin"}/>
-  }else if(auth.user && auth.user.role=='GUEST'){
+  }else if(auth.user && auth.user.role=='Гость'){
     return <Navigate to={url.get("redirect") || "/admin"}/>
   }else {return children}
 

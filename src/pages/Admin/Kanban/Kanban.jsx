@@ -3,7 +3,7 @@ import cl from './Kanban.module.css'
 
 const Kanban = () => {
     return (
-        <div className={cl.container}>
+        <div>
 
         </div>
     );

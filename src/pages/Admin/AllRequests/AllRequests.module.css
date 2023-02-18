@@ -1,0 +1,235 @@
+.container{
+    background-color: white;
+    margin: 72px 280px 0 212px;
+    padding: 28px;
+}
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerParts{
+    display: flex;
+    gap:16px;
+    align-items: center;
+    padding: 8.5px;
+}
+.headerPart{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.headerPartActive{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    background: linear-gradient(290.83deg, #855CBF 5.01%, #D444B4 53.82%, #FF493A 100.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.headerOptions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.addNewRequest{
+    display: flex;
+    align-items: center;
+    padding: 4px 8px 4px 4px;
+    cursor: pointer;
+}
+.addNewRequest__icon{
+
+}
+.addNewRequest__text{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.newClient{
+    cursor: pointer;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.headerDots{
+
+}
+.selectPeriod{
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+}
+.selectPeriod__description{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.selectPeriod__description span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    background: linear-gradient(296.06deg, #303CB2 8.84%, #0088D5 49.48%, #64C3D7 90.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.selectPeriod__icon{
+
+}
+.statisticRequest{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 28px;
+}
+.statisticRequest__el{
+    background: #E3F5FF;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.statisticRequest__el_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.statisticName{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.statisticIcon{
+
+}
+.statisticRequest__el_counter{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #1C1C1C;
+}
+
+.RequestsLits{
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 28px;
+}
+.RequestEl{
+    padding: 24px;
+    background: #F7F9FB;
+    border-radius: 16px;
+}
+.RequestEl__header{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.RequestEl__header_left{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.RequestElHeaderTitle{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.RequestElHeaderDate{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.RequestEl__header_right{
+
+}
+.RequestEl__status{
+    margin-top: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+.RequestEl__status_avatar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left:4px;
+    padding-right: 8px;
+}
+.statusRequestIcon{
+}
+.statusRequestName{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.RequestEl__status_funnel{
+    padding-left: 2px;
+    padding-right: 4px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    color: #59A8D4;
+}
+.RequestEl__range{
+
+}
+.RequestEl__range input{
+    width: 100%;
+}
+.RequestEl__counter{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1C1C1C;
+}

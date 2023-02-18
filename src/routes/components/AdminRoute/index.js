@@ -4,7 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 function AdminRoute({ children }) {
   const auth = useAuth();
   const url = new URLSearchParams();
-  return (auth.user.role==='ADMIN'||auth.user.role==='GUEST') ? (
+  return (auth.user.role==='Администратор'||auth.user.role==='Гость') ? (
       children
   ) : (
       <Navigate
