@@ -64,6 +64,7 @@
     font-size: 12px;
     line-height: 18px;
     color: #59A8D4;
+    margin-bottom: 4px;
 }
 .taskFunnelEl__date{
     margin-top: 8px;
@@ -90,6 +91,7 @@
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.4);
+    margin-top: 4px;
 }
 .taskFunnelEl__executor{
     margin-top: 8px;

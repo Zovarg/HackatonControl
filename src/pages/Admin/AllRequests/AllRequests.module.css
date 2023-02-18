@@ -138,10 +138,11 @@
 }
 
 .RequestsLits{
-    margin-top: 8px;
+    margin-top: 28px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 28px;
+    grid-row-gap: 28px;
 }
 .RequestEl{
     padding: 24px;

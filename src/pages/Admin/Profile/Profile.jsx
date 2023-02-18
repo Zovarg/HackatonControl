@@ -72,7 +72,37 @@ const Profile = () => {
                 <div className={cl.profileStats__avatar}>
                     <img src={AvatarProfile} alt=""/>
                 </div>
-                <div></div>
+                <div className={cl.profileStats__values}>
+                    <div className={cl.profileStatsValue}>
+                        <div className={cl.profileStatsValue__naming}>
+                            <div>Уровень управления</div>
+                            <div>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1.125C6 1.125 6.99157 1.125 7.89769 1.50826C7.89769 1.50826 8.77261 1.87832 9.44715 2.55285C9.44715 2.55285 10.1217 3.22739 10.4917 4.10231C10.4917 4.10231 10.875 5.00843 10.875 6C10.875 6 10.875 6.99156 10.4917 7.89768C10.4917 7.89768 10.1217 8.77261 9.44715 9.44715C9.44715 9.44715 8.77261 10.1217 7.89769 10.4917C7.89769 10.4917 6.99156 10.875 6 10.875C6 10.875 5.00843 10.875 4.10232 10.4917C4.10232 10.4917 3.22739 10.1217 2.55285 9.44715C2.55285 9.44715 1.87832 8.77261 1.50826 7.89769C1.50826 7.89769 1.125 6.99157 1.125 6C1.125 6 1.125 5.00843 1.50826 4.10231C1.50826 4.10231 1.87832 3.22739 2.55285 2.55285C2.55285 2.55285 3.22739 1.87832 4.10232 1.50826C4.10232 1.50826 5.00843 1.125 6 1.125ZM6 1.875C6 1.875 5.16052 1.875 4.39448 2.19901C4.39448 2.19901 3.65428 2.51208 3.08318 3.08318C3.08318 3.08318 2.51209 3.65428 2.19901 4.39448C2.19901 4.39448 1.875 5.16052 1.875 6C1.875 6 1.875 6.83948 2.19901 7.60552C2.19901 7.60552 2.51209 8.34572 3.08318 8.91681C3.08318 8.91681 3.65428 9.48792 4.39448 9.80099C4.39448 9.80099 5.16052 10.125 6 10.125C6 10.125 6.83948 10.125 7.60552 9.80099C7.60552 9.80099 8.34571 9.48792 8.91682 8.91681C8.91682 8.91681 9.48792 8.34571 9.80099 7.60552C9.80099 7.60552 10.125 6.83947 10.125 6C10.125 6 10.125 5.16053 9.80099 4.39448C9.80099 4.39448 9.48792 3.65428 8.91682 3.08318C8.91682 3.08318 8.34571 2.51208 7.60552 2.19901C7.60552 2.19901 6.83948 1.875 6 1.875Z" fill="#1C1C1C"/>
+                                    <path d="M6 8.625H6.375C6.58211 8.625 6.75 8.45711 6.75 8.25C6.75 8.04289 6.58211 7.875 6.375 7.875V5.625C6.375 5.41789 6.20711 5.25 6 5.25H5.625C5.41789 5.25 5.25 5.41789 5.25 5.625C5.25 5.83211 5.41789 6 5.625 6V8.25C5.625 8.45711 5.79289 8.625 6 8.625Z" fill="#1C1C1C"/>
+                                    <path d="M6.46875 3.9375C6.46875 4.24816 6.21689 4.5 5.90625 4.5C5.59561 4.5 5.34375 4.24816 5.34375 3.9375C5.34375 3.62684 5.59561 3.375 5.90625 3.375C6.21689 3.375 6.46875 3.62684 6.46875 3.9375Z" fill="#1C1C1C"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className={cl.profileStatsValue__loader}></div>
+                    </div>
+                    <div className={cl.profileStatsValue}>
+                        <div className={cl.profileStatsValue__naming}>Ст-ть содержания</div>
+                        <div className={cl.profileStatsValue__counter}>1 549 246 ₽</div>
+                    </div>
+                    <div className={cl.profileStatsValue}>
+                        <div className={cl.profileStatsValue__naming}>Объекты</div>
+                        <div className={cl.profileStatsValue__counter}>48</div>
+                    </div>
+                    <div className={cl.profileStatsValue}>
+                        <div className={cl.profileStatsValue__naming}>Доход (мес)</div>
+                        <div className={cl.profileStatsValue__counter}>6 581 309 ₽</div>
+                    </div>
+                    <div className={cl.profileStatsValue}>
+                        <div className={cl.profileStatsValue__naming}>Рейтинг (общий)</div>
+                        <div className={cl.profileStatsValue__counter}>4,8 ⭐️</div>
+                    </div>
+                </div>
             </div>
         </div>
     );

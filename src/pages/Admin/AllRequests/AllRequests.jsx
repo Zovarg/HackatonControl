@@ -27,7 +27,7 @@ const AllRequests = ({page, setPage}) => {
         if(mas.length){
             let value=0
             mas.map(el=>{
-                if(el.status==="DONE") value+=1
+                if(el.status==="Завершено") value+=1
             })
 
             return Math.round(value/mas.length*100)
@@ -36,7 +36,7 @@ const AllRequests = ({page, setPage}) => {
     function counterSuccessTickets(mas){
         let value=0
         mas.map(el=>{
-            if(el.status==="DONE") value+=1
+            if(el.status==="Завершено") value+=1
         })
         return value
     }
@@ -140,16 +140,16 @@ const AllRequests = ({page, setPage}) => {
                         <div className={cl.RequestEl__header}>
                             <div className={cl.RequestEl__header_left}>
                                 <div className={cl.RequestElHeaderTitle}>{el.title}</div>
-                                <div className={cl.RequestElHeaderDate}>Заявка от 12.05}</div>
+                                <div className={cl.RequestElHeaderDate}>Заявка от {el.created.slice(0,10)}</div>
                             </div>
                             <div className={cl.RequestEl__header_right}><img src={Builders}/></div>
                         </div>
                         <div className={cl.RequestEl__status}>
                             <div className={cl.RequestEl__status_avatar}>
                                 <div className={cl.statusRequestIcon}><img src={AvatarRequest}/></div>
-                                <div className={cl.statusRequestName}>{el.owner.firstname+el.owner.firstname}</div>
+                                <div className={cl.statusRequestName}>{el.owner.firstname+' '+' '+el.owner.lastname}</div>
                             </div>
-                            <div className={cl.RequestEl__status_funnel}>Ожидание</div>
+                            <div className={cl.RequestEl__status_funnel}>{el.status}</div>
                         </div>
                         <div className={cl.RequestEl__range}>
                             <input readOnly type="range" value={counterPercent(el.tasks)}/>
