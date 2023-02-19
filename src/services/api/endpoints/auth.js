@@ -6,6 +6,7 @@ const endpoints = {
   getTickets: () => axios.get("/kanban/tickets/"),
   getKanban: () => axios.get("/kanban/tasks/"),
   getTaskStatuses: () => axios.get("/kanban/tasks/statuses"),
+  getProfile: () => axios.get("/profile"),
   updateToken: (data) => axios.post("/token/refresh/", data),
 
 };

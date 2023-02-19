@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import cl from './Profile.module.css'
 import AvatarProfile from "../../../images/AvatarProfile.svg";
 import photoPhoneProfile from "../../../images/photoPhoneProfile.svg";
+import {useFetching} from "../../../hooks/useFetching";
+import api from "../../../services/api";
 
 const Profile = () => {
     const [titles, setTitles]=useState([
@@ -11,6 +13,16 @@ const Profile = () => {
         {name:'Отчеты'},
         {name:'Логи'},
     ])
+    const [dataProfile, setDataProfile]=useState({})
+    const [fetchProfile, isProfileLoading, profileError] = useFetching(async () => {
+        const { data: listData } = await api.auth.getProfile();
+        setDataProfile(listData)
+    })
+
+    useEffect(() => {
+        fetchProfile();
+    }, []);
+
     return (
         <div className={cl.container}>
             <div className={cl.headerWrapper}>
@@ -49,7 +61,7 @@ const Profile = () => {
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21397 1.75963C8.15683 1.3125 7 1.3125 7 1.3125C5.84317 1.3125 4.78603 1.75963 4.78603 1.75963C3.76529 2.19137 2.97833 2.97833 2.97833 2.97833C2.19137 3.76529 1.75963 4.78603 1.75963 4.78603C1.3125 5.84317 1.3125 7 1.3125 7C1.3125 8.15683 1.75963 9.21397 1.75963 9.21397C2.19137 10.2347 2.97833 11.0217 2.97833 11.0217C3.03881 11.0821 3.10067 11.1405 3.16334 11.1968C3.18626 11.2223 3.2123 11.2453 3.24107 11.2651C3.97473 11.8972 4.78603 12.2404 4.78603 12.2404C5.84317 12.6875 7 12.6875 7 12.6875C8.15682 12.6875 9.21397 12.2404 9.21397 12.2404C9.86114 11.9666 10.4143 11.5501 10.7326 11.2819C10.7788 11.2547 10.819 11.2197 10.8518 11.179C10.9611 11.0822 11.0217 11.0217 11.0217 11.0217C11.8086 10.2347 12.2404 9.21396 12.2404 9.21396C12.6875 8.15682 12.6875 7 12.6875 7C12.6875 5.84317 12.2404 4.78603 12.2404 4.78603C11.8086 3.76529 11.0217 2.97833 11.0217 2.97833C10.2347 2.19137 9.21397 1.75963 9.21397 1.75963ZM5.12689 11.4345C4.70547 11.2562 4.33102 11.0063 4.05807 10.7971C4.51941 10.103 5.16908 9.70426 5.16908 9.70426C6.01152 9.18716 7 9.1875 7 9.1875C7.98848 9.1875 8.83092 9.70426 8.83092 9.70426C9.3613 10.0298 9.73514 10.4998 9.93931 10.8032C9.39432 11.214 8.87311 11.4345 8.87311 11.4345C7.97939 11.8125 7 11.8125 7 11.8125C6.02061 11.8125 5.12689 11.4345 5.12689 11.4345ZM4.71135 8.95853C4.71135 8.95853 4.97505 8.79676 5.39336 8.63512C5.30778 8.57075 5.22408 8.49889 5.14384 8.41866C5.14384 8.41866 4.375 7.64981 4.375 6.5625C4.375 6.5625 4.375 5.47519 5.14384 4.70634C5.14384 4.70634 5.91269 3.9375 7 3.9375C7 3.9375 8.08731 3.9375 8.85616 4.70634C8.85616 4.70634 9.625 5.47519 9.625 6.5625C9.625 6.5625 9.625 7.64981 8.85616 8.41866C8.85616 8.41866 8.76614 8.50867 8.60415 8.6271C8.83146 8.71237 9.0642 8.82076 9.28865 8.95853C9.28865 8.95853 10.0219 9.40861 10.5897 10.1977C10.8142 9.93622 11.1911 9.44844 11.4345 8.87311C11.4345 8.87311 11.8125 7.97939 11.8125 7C11.8125 7 11.8125 6.02061 11.4345 5.12689C11.4345 5.12689 11.0692 4.26333 10.403 3.59705C10.403 3.59705 9.73667 2.93076 8.87311 2.56551C8.87311 2.56551 7.97939 2.1875 7 2.1875C7 2.1875 6.02061 2.1875 5.12689 2.56551C5.12689 2.56551 4.26333 2.93077 3.59705 3.59705C3.59705 3.59705 2.93077 4.26333 2.56551 5.12689C2.56551 5.12689 2.1875 6.02061 2.1875 7C2.1875 7 2.1875 7.97939 2.56551 8.87311C2.56551 8.87311 2.86392 9.57862 3.4133 10.2063C3.68142 9.83148 4.11802 9.32272 4.71135 8.95853ZM8.23744 7.79994C7.72487 8.3125 7 8.3125 7 8.3125C6.27513 8.3125 5.76256 7.79994 5.76256 7.79994C5.25 7.28737 5.25 6.5625 5.25 6.5625C5.25 5.83763 5.76256 5.32506 5.76256 5.32506C6.27513 4.8125 7 4.8125 7 4.8125C7.72487 4.8125 8.23744 5.32506 8.23744 5.32506C8.75 5.83763 8.75 6.5625 8.75 6.5625C8.75 7.28737 8.23744 7.79994 8.23744 7.79994Z" fill="black" fill-opacity="0.4"/>
                             </svg>
                         </div>
-                        <div>Aдмин</div>
+                        <div>{dataProfile.role}</div>
                     </div>
                     <div className={cl.profilePersonAddress}>
                         <div>
@@ -67,7 +79,7 @@ const Profile = () => {
                                 <path d="M2.04563 2.74C1.96494 2.66603 1.85946 2.625 1.75 2.625C1.74366 2.625 1.73733 2.62514 1.731 2.62541C1.61507 2.63045 1.5059 2.68134 1.4275 2.76687C1.35353 2.84756 1.3125 2.95304 1.3125 3.0625C1.3125 3.06884 1.31264 3.07517 1.31291 3.0815C1.31795 3.19743 1.36884 3.3066 1.45437 3.385L6.70437 8.1975C6.87164 8.35083 7.12836 8.35083 7.29563 8.1975L12.5453 3.38527C12.6357 3.30241 12.6875 3.18513 12.6875 3.0625L12.6875 3.05886C12.6866 2.95066 12.6456 2.84663 12.5725 2.76687C12.4941 2.68134 12.3849 2.63045 12.269 2.62541C12.2627 2.62514 12.2563 2.625 12.25 2.625L12.248 2.625C12.1392 2.62551 12.0345 2.6665 11.9544 2.73999L7 7.2815L2.04563 2.74Z" fill="black" fill-opacity="0.4"/>
                             </svg>
                         </div>
-                        <div>admin@re-control.com</div>
+                        <div>{dataProfile.email}</div>
                     </div>
                 </div>
                 <div className={cl.profileStats__avatar}>
@@ -85,7 +97,16 @@ const Profile = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className={cl.profileStatsValue__loader}></div>
+                        <div className={cl.profileStatsValue__loader}>
+                            <div className={cl.loadingContainer}>
+                                <div className={cl.loadingBar}>
+                                    <div className={cl.amount}>
+                                        <div className={cl.loaded}>84%</div>
+                                        <div className={cl.lines}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className={cl.profileStatsValue}>
                         <div className={cl.profileStatsValue__naming}>Ст-ть содержания</div>
@@ -114,7 +135,7 @@ const Profile = () => {
                     <div className={cl.profileBody__fields}>
                         <div className={cl.profileBody__field}>
                             <div className={cl.profileBody__field_name}>ФИО</div>
-                            <div className={cl.profileBody__field_value}>Ткаченко И. Г.</div>
+                            <div className={cl.profileBody__field_value}>{dataProfile.firstname+' '+dataProfile.lastname}</div>
                         </div>
                         <div className={cl.profileBody__field}>
                             <div className={cl.profileBody__field_name}>Организация</div>
@@ -122,7 +143,7 @@ const Profile = () => {
                         </div>
                         <div className={cl.profileBody__field}>
                             <div className={cl.profileBody__field_name}>Контактный телефон</div>
-                            <div className={cl.profileBody__field_value}>+7 (989) 999-89-89</div>
+                            <div className={cl.profileBody__field_value}>{dataProfile.phone}</div>
                         </div>
                         <div className={cl.profileBody__field}>
                             <div className={cl.profileBody__field_name}>Email</div>

@@ -141,8 +141,37 @@
     color: #1C1C1C;
 }
 .profileStatsValue__loader{
+    margin: 4px;
+}
+.loadingContainer{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    height: 28px;
+    position: relative;
+}
+.loadingBar{
+    background: linear-gradient(290.83deg, #855CBF 5.01%, #D444B4 53.82%, #FF493A 100.06%);
+    border-radius: 8px 0px 0px 8px;
+    position: absolute;
+    left: 0;
+    right: 26%;
+}
+.amount{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.loaded{
+    text-align: center;
+}
+.lines{
 
 }
+
 .profileStatsValue__counter{
     font-family: 'Neue Machina';
     font-style: normal;
