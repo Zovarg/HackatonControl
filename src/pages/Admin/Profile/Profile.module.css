@@ -264,6 +264,12 @@
 
     color: #1C1C1C;
 }
+.profileBody__field_value input{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 5px;
+
+}
 .profileBody__success{
     background: rgba(161, 227, 203, 0.2);
     border-radius: 8px;
