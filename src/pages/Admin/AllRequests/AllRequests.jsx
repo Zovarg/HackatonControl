@@ -24,7 +24,6 @@ const AllRequests = ({page, setPage}) => {
     const [fetchTickets, isPostsLoading, postError] = useFetching(async () => {
         const { data: listTickets } = await api.auth.getTickets();
         setTickets(listTickets)
-        console.log(tickets)
     })
     useEffect(() => {
         fetchTickets();

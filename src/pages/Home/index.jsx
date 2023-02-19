@@ -18,7 +18,6 @@ function Home() {
         auth.setRefreshToken(loginData.refresh)
         let userData=jwt(loginData.access)
         auth.setUser(userData);
-        console.log(jwt(loginData.access))
     })
     const [formData, setFormData]=useState({
         "email": "",

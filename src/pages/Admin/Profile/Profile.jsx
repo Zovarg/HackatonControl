@@ -31,7 +31,6 @@ const Profile = () => {
     const [saveProfile, isSaveLoading, saveError] = useFetching(async (info) => {
         delete info.photo;
         const { data: listData } = await api.auth.updProfile(info);
-        console.log(listData)
     })
     useEffect(() => {
         fetchProfile();

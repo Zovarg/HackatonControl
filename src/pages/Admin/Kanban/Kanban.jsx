@@ -48,7 +48,6 @@ const Kanban = (listName, updateGroups) => {
     const [fetchTasks, isTaskLoading, taskError] = useFetching(async () => {
         const { data: listTasks } = await api.auth.getKanban();
         setStatusPages(listTasks)
-        console.log(statusPages)
     })
     const [fetchTasksStatuses, isTaskStatusesLoading, taskStatusesError] = useFetching(async () => {
         const { data: listTasks } = await api.auth.getTaskStatuses();
@@ -57,7 +56,6 @@ const Kanban = (listName, updateGroups) => {
         })
         setTaskStatuses(listTasks)
         fetchTasks()
-        console.log(taskStatuses)
     })
     useEffect(() => {
         fetchTasksStatuses();
@@ -140,8 +138,7 @@ const Kanban = (listName, updateGroups) => {
                         <div className={cl.taskFunnel__line} style={{background:el.color}}></div>
                         <div className={cl.taskFunnel__list}>
                             {statusPages.map(obj=>
-                                obj.status===el.name?
-                                <div className={cl.taskFunnel__list_el} key={obj.id}>
+                                (obj.status===el.name)&&<div className={cl.taskFunnel__list_el} key={obj.id}>
                                     <div className={cl.taskFunnelEl__name}>{obj.waiting_for}</div>
                                     <div className={cl.taskFunnelEl__date}>Заявка от {obj.created.slice(0,10)}</div>
                                     <div className={cl.taskFunnelEl__description}>{obj.query}</div>
@@ -175,8 +172,7 @@ const Kanban = (listName, updateGroups) => {
                                         </div>
                                     </div>
                                 </div>
-                                    :
-                                    <></>
+
                             )}
                         </div>
                     </div>
