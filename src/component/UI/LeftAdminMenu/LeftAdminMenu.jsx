@@ -288,7 +288,7 @@ const LeftAdminMenu = ({page, setPage}) => {
                                                 el.mainLinkVisible?
                                                     <div className={cl.blockAdditionLinks}>
                                                         {el.additionalLinks.map(ob=>
-                                                            <div className={cl.blockAdditionLink} onClick={()=>{setPage(ob.additionalLinkName)}}>{ob.additionalLinkName}</div>
+                                                            <div key={ob.additionalLinkName}  className={cl.blockAdditionLink} onClick={()=>{setPage(ob.additionalLinkName)}}>{ob.additionalLinkName}</div>
                                                         )}
                                                     </div>
                                                     :

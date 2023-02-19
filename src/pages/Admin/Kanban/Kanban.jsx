@@ -4,8 +4,35 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import cl from './Kanban.module.css'
 import {useFetching} from "../../../hooks/useFetching";
 import api from "../../../services/api";
-
-const Kanban = () => {
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+/*const finalSpaceCharacters = [
+    {
+        id: 'gary',
+        name: 'Gary Goodspeed',
+        thumb: '/images/gary.png'
+    },
+    {
+        id: 'cato',
+        name: 'Little Cato',
+        thumb: '/images/cato.png'
+    },
+    {
+        id: 'kvn',
+        name: 'KVN',
+        thumb: '/images/kvn.png'
+    },
+    {
+        id: 'mooncake',
+        name: 'Mooncake',
+        thumb: '/images/mooncake.png'
+    },
+    {
+        id: 'quinn',
+        name: 'Quinn Ergon',
+        thumb: '/images/quinn.png'
+    }
+]*/
+const Kanban = (listName, updateGroups) => {
     const [titles, setTitles]=useState([
         {name:'Все заявки'},
         {name:'Канбан'},
@@ -35,6 +62,21 @@ const Kanban = () => {
     useEffect(() => {
         fetchTasksStatuses();
     }, []);
+
+
+    /*const [characters, updateCharacters] = useState(finalSpaceCharacters);
+
+    function handleOnDragEnd(result) {
+        if (!result.destination) return;
+
+        const items = Array.from(characters);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+
+        updateCharacters(items);
+    }*/
+
+
     return (
         <div className={cl.container}>
             <div className={cl.headerWrapper}>
@@ -64,6 +106,31 @@ const Kanban = () => {
                     </div>
                 </div>
             </div>
+            {/*<DragDropContext onDragEnd={handleOnDragEnd}>
+                <Droppable droppableId="characters">
+                    {(provided) => (
+                        <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
+                            {characters.map(({id, name, thumb}, index) => {
+                                return (
+                                    <Draggable key={id} draggableId={id} index={index}>
+                                        {(provided) => (
+                                            <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                                <div className="characters-thumb">
+                                                    <img src={thumb} alt={`${name} Thumb`} />
+                                                </div>
+                                                <p>
+                                                    { name }
+                                                </p>
+                                            </li>
+                                        )}
+                                    </Draggable>
+                                );
+                            })}
+                            {provided.placeholder}
+                        </ul>
+                    )}
+                </Droppable>
+            </DragDropContext>*/}
             <ScrollContainer className={cl.tasks_wrapper}>
                 {taskStatuses.map(el=>
                     <div key={el.name} className={cl.taskFunnel}>
@@ -74,7 +141,7 @@ const Kanban = () => {
                         <div className={cl.taskFunnel__list}>
                             {statusPages.map(obj=>
                                 obj.status===el.name?
-                                <div className={cl.taskFunnel__list_el}>
+                                <div className={cl.taskFunnel__list_el} key={obj.id}>
                                     <div className={cl.taskFunnelEl__name}>{obj.waiting_for}</div>
                                     <div className={cl.taskFunnelEl__date}>Заявка от {obj.created.slice(0,10)}</div>
                                     <div className={cl.taskFunnelEl__description}>{obj.query}</div>
