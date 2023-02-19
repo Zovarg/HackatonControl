@@ -151,7 +151,7 @@ const Kanban = (listName, updateGroups) => {
                                             <div className={cl.executorPhoto}>
                                                 <img src={AvatarKanban}/>
                                             </div>
-                                            <div className={cl.executorName}>{obj.executor.firstname}</div>
+                                            <div className={cl.executorName}>{obj.executor.fio}</div>
                                         </div>
                                         <div className={cl.taskFunnelEl__executor_right}>
                                             <div className={cl.counterFiles}>

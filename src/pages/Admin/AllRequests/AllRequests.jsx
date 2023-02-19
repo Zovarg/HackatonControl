@@ -14,6 +14,12 @@ const AllRequests = ({page, setPage}) => {
         {name:'Торговые центры'},
         {name:'Отели'}
     ])
+    const getBackgroundSize = (id) => {
+        return {
+            backgroundSize: `${id}% 100%`,
+        };
+    };
+
     const [tickets, setTickets]=useState([])
     const [fetchTickets, isPostsLoading, postError] = useFetching(async () => {
         const { data: listTickets } = await api.auth.getTickets();
@@ -147,12 +153,19 @@ const AllRequests = ({page, setPage}) => {
                         <div className={cl.RequestEl__status}>
                             <div className={cl.RequestEl__status_avatar}>
                                 <div className={cl.statusRequestIcon}><img src={AvatarRequest}/></div>
-                                <div className={cl.statusRequestName}>{el.owner.firstname+' '+' '+el.owner.lastname}</div>
+                                <div className={cl.statusRequestName}>{el.owner.fio}</div>
                             </div>
                             <div className={cl.RequestEl__status_funnel}>{el.status}</div>
                         </div>
                         <div className={cl.RequestEl__range}>
-                            <input readOnly type="range" value={counterPercent(el.tasks)}/>
+                            <input
+                                min={0}
+                                max={100}
+                                style={getBackgroundSize(counterPercent(el.tasks))}
+                                readOnly
+                                type="range"
+                                value={counterPercent(el.tasks)}
+                            />
                         </div>
                         <div className={cl.RequestEl__counter}>
                             <div>{counterSuccessTickets(el.tasks)} / {el.tasks.length?el.tasks.length:'?'} Всего подзадач</div>
