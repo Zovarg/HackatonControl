@@ -1,6 +1,7 @@
 /*Верхний фикс элемент*/
 .searchHeader{
     height: 72px;
+    z-index: 10;
     background-color: white;
     position: fixed;
     top: 0;

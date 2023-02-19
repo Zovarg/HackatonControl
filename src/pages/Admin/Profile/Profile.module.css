@@ -74,6 +74,7 @@
     padding: 24px 24px 28px;
     background: #F7F9FB;
     border-radius: 16px;
+    margin-bottom: 28px;
 }
 .profileStats__user{
     font-family: 'Neue Machina';
@@ -154,4 +155,308 @@
     /* Black/100% */
 
     color: #1C1C1C;
+}
+
+
+.profileData{
+    padding: 24px;
+    background: #F7F9FB;
+    border-radius: 16px;
+}
+.profileData__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.profileData__header_title{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.profileData__header_edit{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.profileBody{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.profileBody__fields{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.profileBody__field{
+    margin-top: 11px;
+    display: flex;
+    gap: 80px;
+}
+.profileBody__field_name{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Black/40% */
+
+    color: rgba(0, 0, 0, 0.4);
+    width: 20%;
+}
+.profileBody__field_value{
+    /* 14/14 Regular */
+    width: 80%;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+.profileBody__success{
+    background: rgba(161, 227, 203, 0.2);
+    border-radius: 8px;
+    padding: 15px 0 15px 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profileBody__success_icon{
+
+}
+.profileBody__success_description{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.topSuccessBody{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+.bottomSuccessBody{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Black/100% */
+
+    color: #1C1C1C;
+}
+.profileTasksAndMobile{
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 28px;
+}
+.profileTasks{
+    padding-top: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    background: #F7F9FB;
+    border-radius: 16px;
+}
+.profileTasks__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px 4px 0;
+}
+.profileTasks__header_name{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.profileTasks__header_value{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.tableStatus1{
+    display: flex;
+    align-items: center;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    background: linear-gradient(269.78deg, #8244DC 0.17%, #8244DC 0.18%, #A756CD 51.54%, #BC6EC1 99.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.tableStatus2{
+    display: flex;
+    align-items: center;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #4AA785;
+}
+.tableStatus3{
+    display: flex;
+    align-items: center;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFC555;
+}
+.tableStatus4{
+    display: flex;
+    align-items: center;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.tableStatus5{
+    display: flex;
+    align-items: center;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #59A8D4;
+}
+.tdTasks{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1C1C1C;
+}
+th{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.profileMobile{
+    background: #F7F9FB;
+    border-radius: 16px;
+    padding-top: 17.5px;
+    padding-bottom: 19.5px;
+}
+.profileMobile__titles{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 11px;
+}
+.profileMobile__title{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1C1C1C;
+}
+.profileMobile__photo{
+    display: flex;
+    justify-content: center;
+}
+.profileMobile__btns{
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.profileMobile__btn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 6px;
+    background: #FFFFFF;
+    /* Black/10% */
+
+    border: 0.75px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+
+
+
+.footerProfile{
+    padding: 27px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footerProfile__copyright{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.footerProfile__menu{
+    display: flex;
+    gap: 16px;
+}
+.footerProfile__menu_el{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
